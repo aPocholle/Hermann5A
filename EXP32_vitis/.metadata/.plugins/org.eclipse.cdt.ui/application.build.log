@@ -1,0 +1,17 @@
+14:55:01 **** Incremental Build of configuration Debug for project application ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building target: application.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/export/platform/sw/platform/domain/bsplib/lib -o "application.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/vitis/2019.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/platform.o: in function `init_uart':
+C:\Users\ap576391\Documents\Hermann\EXP32_vitis\application\Debug/../src/platform.c:83: multiple definition of `init_uart'; ./src/helloworld.o:C:\Users\ap576391\Documents\Hermann\EXP32_vitis\application\Debug/../src/helloworld.c:61: first defined here
+collect2.exe: error: ld returned 1 exit status
+make[1]: *** [makefile:43: application.elf] Error 1
+make: *** [makefile:34: all] Error 2
+
+14:55:01 Build Finished (took 474ms)
+

@@ -1,0 +1,281 @@
+14:16:21 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\ap576391\Documents\Hermann\EXP32_vitis\temp_xsdb_launch_script.tcl
+14:16:23 INFO  : XSCT server has started successfully.
+14:16:23 INFO  : Successfully done setting XSCT server connection channel  
+14:16:23 INFO  : plnx-install-location is set to ''
+14:16:23 INFO  : Successfully done query RDI_DATADIR 
+14:16:23 INFO  : Successfully done setting workspace for the tool. 
+14:16:24 INFO  : Registering command handlers for Vitis TCF services
+14:17:45 INFO  : Successfully done sdx_reload_mss "C:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+14:17:45 INFO  : Successfully done sdx_reload_mss "C:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+14:19:41 INFO  : Successfully done sdx_reload_mss "C:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/ps7_cortexa9_0/domain/bsp/system.mss"
+14:21:43 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+14:25:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:25:17 INFO  : Jtag cable 'Digilent Zed 210248553076' is selected.
+14:25:17 INFO  : 'jtag frequency' command is executed.
+14:25:17 INFO  : Context for 'APU' is selected.
+14:25:18 INFO  : System reset is completed.
+14:25:21 INFO  : 'after 3000' command is executed.
+14:25:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248553076" && level==0} -index 1' command is executed.
+14:25:23 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/EXP32_vitis/application/_ide/bitstream/system_wrapper.bit"
+14:25:23 INFO  : Context for 'APU' is selected.
+14:25:23 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/export/platform/hw/system_wrapper.xsa'.
+14:25:23 INFO  : 'configparams force-mem-access 1' command is executed.
+14:25:23 INFO  : Context for 'APU' is selected.
+14:25:23 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/EXP32_vitis/application/_ide/psinit/ps7_init.tcl' is done.
+14:25:23 INFO  : 'ps7_init' command is executed.
+14:25:23 INFO  : 'ps7_post_config' command is executed.
+14:25:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:25:24 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/EXP32_vitis/application/Debug/application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:25:24 INFO  : 'configparams force-mem-access 0' command is executed.
+14:25:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248553076" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/EXP32_vitis/application/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/export/platform/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/EXP32_vitis/application/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/EXP32_vitis/application/Debug/application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:25:24 INFO  : Memory regions updated for context APU
+14:25:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:25:24 INFO  : 'con' command is executed.
+14:25:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:25:24 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\EXP32_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_application_system_standalone.tcl'
+14:43:03 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+14:43:16 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+14:51:04 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+14:54:32 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+14:54:38 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+14:55:01 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+14:56:14 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+14:57:44 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+14:57:59 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+14:58:32 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+14:58:41 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+14:59:00 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+15:00:15 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+15:00:27 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+15:00:37 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+15:01:11 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+15:01:23 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+15:02:16 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+15:37:21 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+15:39:34 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+15:41:09 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+15:42:05 INFO  : Disconnected from the channel tcfchan#4.
+15:42:27 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\ap576391\Documents\Hermann\EXP32_vitis\temp_xsdb_launch_script.tcl
+15:42:30 INFO  : XSCT server has started successfully.
+15:42:30 INFO  : plnx-install-location is set to ''
+15:42:30 INFO  : Successfully done setting XSCT server connection channel  
+15:42:30 INFO  : Successfully done setting workspace for the tool. 
+15:42:31 INFO  : Registering command handlers for Vitis TCF services
+15:42:31 INFO  : Successfully done query RDI_DATADIR 
+15:42:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:43:00 INFO  : Jtag cable 'Digilent Zed 210248553076' is selected.
+15:43:00 INFO  : 'jtag frequency' command is executed.
+15:43:00 INFO  : Context for 'APU' is selected.
+15:43:00 INFO  : System reset is completed.
+15:43:03 INFO  : 'after 3000' command is executed.
+15:43:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248553076" && level==0} -index 1' command is executed.
+15:43:05 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/bitstream/system_wrapper.bit"
+15:43:05 INFO  : Context for 'APU' is selected.
+15:43:05 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/export/platform/hw/system_wrapper.xsa'.
+15:43:05 INFO  : 'configparams force-mem-access 1' command is executed.
+15:43:05 INFO  : Context for 'APU' is selected.
+15:43:05 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/psinit/ps7_init.tcl' is done.
+15:43:06 INFO  : 'ps7_init' command is executed.
+15:43:06 INFO  : 'ps7_post_config' command is executed.
+15:43:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:43:06 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/Debug/appli.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:43:06 INFO  : 'configparams force-mem-access 0' command is executed.
+15:43:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248553076" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/export/platform/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/Debug/appli.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:43:06 INFO  : Memory regions updated for context APU
+15:43:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:43:06 INFO  : 'con' command is executed.
+15:43:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:43:06 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\EXP32_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_appli_system_standalone.tcl'
+15:43:18 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+15:43:25 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/export/platform/hw/system_wrapper.xsa is already opened
+
+15:43:32 INFO  : Disconnected from the channel tcfchan#1.
+15:43:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:43:32 INFO  : Jtag cable 'Digilent Zed 210248553076' is selected.
+15:43:32 INFO  : 'jtag frequency' command is executed.
+15:43:32 INFO  : Context for 'APU' is selected.
+15:43:32 INFO  : System reset is completed.
+15:43:35 INFO  : 'after 3000' command is executed.
+15:43:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248553076" && level==0} -index 1' command is executed.
+15:43:37 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/bitstream/system_wrapper.bit"
+15:43:37 INFO  : Context for 'APU' is selected.
+15:43:41 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/export/platform/hw/system_wrapper.xsa'.
+15:43:41 INFO  : 'configparams force-mem-access 1' command is executed.
+15:43:41 INFO  : Context for 'APU' is selected.
+15:43:41 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/psinit/ps7_init.tcl' is done.
+15:43:41 INFO  : 'ps7_init' command is executed.
+15:43:41 INFO  : 'ps7_post_config' command is executed.
+15:43:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:43:41 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/Debug/appli.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:43:41 INFO  : 'configparams force-mem-access 0' command is executed.
+15:43:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248553076" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/export/platform/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/Debug/appli.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:43:41 INFO  : Memory regions updated for context APU
+15:43:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:43:41 INFO  : 'con' command is executed.
+15:43:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:43:41 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\EXP32_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_appli_system_standalone.tcl'
+15:43:52 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+15:44:00 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+15:44:12 INFO  : Disconnected from the channel tcfchan#3.
+15:44:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:44:13 INFO  : Jtag cable 'Digilent Zed 210248553076' is selected.
+15:44:13 INFO  : 'jtag frequency' command is executed.
+15:44:13 INFO  : Context for 'APU' is selected.
+15:44:13 INFO  : System reset is completed.
+15:44:16 INFO  : 'after 3000' command is executed.
+15:44:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248553076" && level==0} -index 1' command is executed.
+15:44:18 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/bitstream/system_wrapper.bit"
+15:44:18 INFO  : Context for 'APU' is selected.
+15:44:21 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/export/platform/hw/system_wrapper.xsa'.
+15:44:21 INFO  : 'configparams force-mem-access 1' command is executed.
+15:44:21 INFO  : Context for 'APU' is selected.
+15:44:21 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/psinit/ps7_init.tcl' is done.
+15:44:22 INFO  : 'ps7_init' command is executed.
+15:44:22 INFO  : 'ps7_post_config' command is executed.
+15:44:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:44:22 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/Debug/appli.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:44:22 INFO  : 'configparams force-mem-access 0' command is executed.
+15:44:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248553076" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/export/platform/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/Debug/appli.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:44:22 INFO  : Memory regions updated for context APU
+15:44:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:44:22 INFO  : 'con' command is executed.
+15:44:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:44:22 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\EXP32_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_appli_system_standalone.tcl'
+16:17:39 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+16:17:45 INFO  : Disconnected from the channel tcfchan#4.
+16:17:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:17:46 INFO  : Jtag cable 'Digilent Zed 210248553076' is selected.
+16:17:46 INFO  : 'jtag frequency' command is executed.
+16:17:46 INFO  : Context for 'APU' is selected.
+16:17:46 INFO  : System reset is completed.
+16:17:49 INFO  : 'after 3000' command is executed.
+16:17:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248553076" && level==0} -index 1' command is executed.
+16:17:51 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/bitstream/system_wrapper.bit"
+16:17:51 INFO  : Context for 'APU' is selected.
+16:17:55 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/export/platform/hw/system_wrapper.xsa'.
+16:17:55 INFO  : 'configparams force-mem-access 1' command is executed.
+16:17:55 INFO  : Context for 'APU' is selected.
+16:17:55 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/psinit/ps7_init.tcl' is done.
+16:17:55 INFO  : 'ps7_init' command is executed.
+16:17:55 INFO  : 'ps7_post_config' command is executed.
+16:17:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:17:55 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/Debug/appli.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:17:55 INFO  : 'configparams force-mem-access 0' command is executed.
+16:17:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248553076" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/export/platform/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/EXP32_vitis/appli/Debug/appli.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:17:55 INFO  : Memory regions updated for context APU
+16:17:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:17:55 INFO  : 'con' command is executed.
+16:17:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:17:55 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\EXP32_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_appli_system_standalone.tcl'
+16:18:50 INFO  : Checking for BSP changes to sync application flags for project 'appli'...
+17:04:12 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\ap576391\Documents\Hermann\EXP32_vitis\temp_xsdb_launch_script.tcl

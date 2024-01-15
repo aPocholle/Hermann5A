@@ -1,0 +1,158 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Jan 15 13:30:09 2024
+# Process ID: 12012
+# Current directory: C:/Users/ap576391/Documents/Hermann/Fibo_vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11712 C:\Users\ap576391\Documents\Hermann\Fibo_vivado\Fibo_vivado.xpr
+# Log file: C:/Users/ap576391/Documents/Hermann/Fibo_vivado/vivado.log
+# Journal file: C:/Users/ap576391/Documents/Hermann/Fibo_vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ap576391/Documents/Hermann/Fibo'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/ap576391/Documents/Hermann/Fibo' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/ap576391/Documents/Hermann/Fibo_vivado'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:12 . Memory (MB): peak = 754.152 ; gain = 116.938
+open_bd_design {C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/systeme.bd}
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:hls:mire:1.0 - mire
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <systeme> from BD file <C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/systeme.bd>
+open_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 939.273 ; gain = 95.844
+update_compile_order -fileset sources_1
+close_bd_design [get_bd_designs systeme]
+Wrote  : <C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/ui/bd_f6e61896.ui> 
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/ap576391/Documents/Hermann/Fibo/solution1/impl/ip/component.xml. It will be created.
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ap576391/Documents/Hermann/Fibo'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/ap576391/Documents/Hermann/Fibo' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/ap576391/Documents/Hermann/Fibo_vivado'.)
+report_ip_status -name ip_status
+open_bd_design {C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/systeme.bd}
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:hls:mire:1.0 - mire
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <systeme> from BD file <C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/systeme.bd>
+set_property LOCK_UPGRADE 1 [get_bd_cells /mire]
+WARNING: [BD 41-2028] Locking mire to version 1.0. If the latest driver for the IP is not backwards compatible, software flow will assign a generic driver or no driver for this IP
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_cells mire]
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/Users/ap576391/Documents/Hermann/Fibo [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ap576391/Documents/Hermann/Fibo'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/ap576391/Documents/Hermann/Fibo' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/ap576391/Documents/Hermann/Fibo_vivado'.)
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:fibonacci:1.0 fibonacci_0
+endgroup
+set_property location {4.5 1387 222} [get_bd_cells fibonacci_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {/clk_wiz_0/clk_out1 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/fibonacci_0/s_axi_AXILiteS} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins fibonacci_0/s_axi_AXILiteS]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Slave segment </fibonacci_0/s_axi_AXILiteS/Reg> is being mapped into address space </processing_system7_0/Data> at <0x43C0_0000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_0_100M/ext_reset_in]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_0_100M/ext_reset_in]
+save_bd_design
+Wrote  : <C:\Users\ap576391\Documents\Hermann\Fibo_vivado\Fibo_vivado.srcs\sources_1\bd\systeme\systeme.bd> 
+Wrote  : <C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/ui/bd_f6e61896.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+WARNING: [BD 41-2121] Port clk associated reset port rst does not exist
+WARNING: [BD 41-927] Following properties on pin /fibonacci_0/ap_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	PHASE=0.0 
+Wrote  : <C:\Users\ap576391\Documents\Hermann\Fibo_vivado\Fibo_vivado.srcs\sources_1\bd\systeme\systeme.bd> 
+VHDL Output written to : C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/synth/systeme.vhd
+VHDL Output written to : C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/sim/systeme.vhd
+VHDL Output written to : C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/hdl/systeme_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fibonacci_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_100M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/ip/systeme_auto_pc_0/systeme_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/hw_handoff/systeme.hwh
+Generated Block Design Tcl file C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/hw_handoff/systeme_bd.tcl
+Generated Hardware Definition File C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/synth/systeme.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP systeme_auto_pc_0, cache-ID = f55b65fb39ab5220; cache size = 2.295 MB.
+INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
+[Mon Jan 15 14:10:08 2024] Launched systeme_fibonacci_0_0_synth_1, systeme_rst_clk_wiz_0_100M_0_synth_1, synth_1...
+Run output will be captured here:
+systeme_fibonacci_0_0_synth_1: C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.runs/systeme_fibonacci_0_0_synth_1/runme.log
+systeme_rst_clk_wiz_0_100M_0_synth_1: C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.runs/systeme_rst_clk_wiz_0_100M_0_synth_1/runme.log
+synth_1: C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.runs/synth_1/runme.log
+[Mon Jan 15 14:10:08 2024] Launched impl_1...
+Run output will be captured here: C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1367.313 ; gain = 0.000
+write_hw_platform -fixed -force  -include_bit -file C:/Users/ap576391/Documents/Hermann/Fibo_vivado/fibo_hardware.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/ap576391/Documents/Hermann/Fibo_vivado/fibo_hardware.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2019.2/data\embeddedsw) loading 0 seconds
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/ap576391/Documents/Hermann/Fibo_vivado/fibo_hardware.xsa
+write_hw_platform: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1367.313 ; gain = 0.000
+delete_bd_objs [get_bd_nets rst_clk_wiz_0_100M_peripheral_aresetn]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_cells rst_clk_wiz_0_100M]
+delete_bd_objs [get_bd_cells xlconstant_0]
+delete_bd_objs [get_bd_nets clk_1] [get_bd_cells clk_wiz_0]
+delete_bd_objs [get_bd_ports clk]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins fibonacci_0/ap_clk]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [BD 5-455] Automation on '/processing_system7_0/M_AXI_GP0_ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/ps7_0_axi_periph/ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/ps7_0_axi_periph/M00_ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/ps7_0_axi_periph/S00_ACLK' will not be run, since it is obsolete due to previously run automations
+endgroup
+validate_bd_design
+assign_bd_address
+save_bd_design
+Wrote  : <C:\Users\ap576391\Documents\Hermann\Fibo_vivado\Fibo_vivado.srcs\sources_1\bd\systeme\systeme.bd> 
+Wrote  : <C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/ui/bd_f6e61896.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [BD 41-1662] The design 'systeme.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/synth/systeme.vhd
+VHDL Output written to : C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/sim/systeme.vhd
+VHDL Output written to : C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/hdl/systeme_wrapper.vhd
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fibonacci_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/ip/systeme_auto_pc_0/systeme_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+Exporting to file C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/hw_handoff/systeme.hwh
+Generated Block Design Tcl file C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/hw_handoff/systeme_bd.tcl
+Generated Hardware Definition File C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.srcs/sources_1/bd/systeme/synth/systeme.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP systeme_auto_pc_0, cache-ID = f55b65fb39ab5220; cache size = 2.795 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP systeme_rst_ps7_0_100M_0, cache-ID = e522aad73e2bdc04; cache size = 2.795 MB.
+INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
+[Mon Jan 15 14:26:34 2024] Launched synth_1...
+Run output will be captured here: C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.runs/synth_1/runme.log
+[Mon Jan 15 14:26:34 2024] Launched impl_1...
+Run output will be captured here: C:/Users/ap576391/Documents/Hermann/Fibo_vivado/Fibo_vivado.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1367.313 ; gain = 0.000
+write_hw_platform -fixed -force  -include_bit -file C:/Users/ap576391/Documents/Hermann/Fibo_vivado/hardware.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/ap576391/Documents/Hermann/Fibo_vivado/hardware.xsa ...
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/ap576391/Documents/Hermann/Fibo_vivado/hardware.xsa
+write_hw_platform: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1367.313 ; gain = 0.000

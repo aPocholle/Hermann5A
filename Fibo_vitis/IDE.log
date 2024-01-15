@@ -1,0 +1,597 @@
+13:32:55 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\ap576391\Documents\Hermann\Fibo_vitis\temp_xsdb_launch_script.tcl
+13:32:59 INFO  : XSCT server has started successfully.
+13:32:59 INFO  : Successfully done setting XSCT server connection channel  
+13:32:59 INFO  : plnx-install-location is set to ''
+13:32:59 INFO  : Successfully done setting workspace for the tool. 
+13:32:59 INFO  : Successfully done query RDI_DATADIR 
+13:33:03 INFO  : Registering command handlers for Vitis TCF services
+13:34:29 INFO  : Successfully done sdx_reload_mss "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+13:34:29 INFO  : Successfully done sdx_reload_mss "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+13:36:57 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+13:42:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:42:36 INFO  : Jtag cable 'Digilent Zed 210248B185CC' is selected.
+13:42:36 INFO  : 'jtag frequency' command is executed.
+13:42:36 INFO  : Context for 'APU' is selected.
+13:42:36 INFO  : System reset is completed.
+13:42:39 INFO  : 'after 3000' command is executed.
+13:42:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1' command is executed.
+13:42:41 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/systeme_wrapper.bit"
+13:42:41 INFO  : Context for 'APU' is selected.
+13:42:41 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/systeme_wrapper.xsa'.
+13:42:41 INFO  : 'configparams force-mem-access 1' command is executed.
+13:42:41 INFO  : Context for 'APU' is selected.
+13:42:41 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl' is done.
+13:42:42 INFO  : 'ps7_init' command is executed.
+13:42:42 INFO  : 'ps7_post_config' command is executed.
+13:42:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:42 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:42:42 INFO  : 'configparams force-mem-access 0' command is executed.
+13:42:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/systeme_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/systeme_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:42:42 INFO  : Memory regions updated for context APU
+13:42:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:42 INFO  : 'con' command is executed.
+13:42:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:42:42 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\Fibo_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_app_system_standalone.tcl'
+13:51:27 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+13:51:45 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+13:52:05 INFO  : Disconnected from the channel tcfchan#2.
+13:52:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:52:05 INFO  : Jtag cable 'Digilent Zed 210248B185CC' is selected.
+13:52:05 INFO  : 'jtag frequency' command is executed.
+13:52:05 INFO  : Context for 'APU' is selected.
+13:52:05 INFO  : System reset is completed.
+13:52:08 INFO  : 'after 3000' command is executed.
+13:52:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1' command is executed.
+13:52:10 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/systeme_wrapper.bit"
+13:52:10 INFO  : Context for 'APU' is selected.
+13:52:10 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/systeme_wrapper.xsa'.
+13:52:10 INFO  : 'configparams force-mem-access 1' command is executed.
+13:52:10 INFO  : Context for 'APU' is selected.
+13:52:10 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl' is done.
+13:52:11 INFO  : 'ps7_init' command is executed.
+13:52:11 INFO  : 'ps7_post_config' command is executed.
+13:52:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:52:11 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:52:11 INFO  : 'configparams force-mem-access 0' command is executed.
+13:52:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/systeme_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/systeme_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:52:11 INFO  : Memory regions updated for context APU
+13:52:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:52:11 INFO  : 'con' command is executed.
+13:52:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:52:11 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\Fibo_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_app_system_standalone.tcl'
+13:55:58 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+13:56:11 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+13:56:30 INFO  : Disconnected from the channel tcfchan#5.
+13:56:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:56:30 INFO  : Jtag cable 'Digilent Zed 210248B185CC' is selected.
+13:56:30 INFO  : 'jtag frequency' command is executed.
+13:56:30 INFO  : Context for 'APU' is selected.
+13:56:30 INFO  : System reset is completed.
+13:56:33 INFO  : 'after 3000' command is executed.
+13:56:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1' command is executed.
+13:56:35 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/systeme_wrapper.bit"
+13:56:35 INFO  : Context for 'APU' is selected.
+13:56:35 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/systeme_wrapper.xsa'.
+13:56:35 INFO  : 'configparams force-mem-access 1' command is executed.
+13:56:35 INFO  : Context for 'APU' is selected.
+13:56:35 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl' is done.
+13:56:36 INFO  : 'ps7_init' command is executed.
+13:56:36 INFO  : 'ps7_post_config' command is executed.
+13:56:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:56:36 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:56:36 INFO  : 'configparams force-mem-access 0' command is executed.
+13:56:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/systeme_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/systeme_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:56:36 INFO  : Memory regions updated for context APU
+13:56:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:56:36 INFO  : 'con' command is executed.
+13:56:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:56:36 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\Fibo_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_app_system_standalone.tcl'
+13:57:29 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+13:57:35 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+13:57:46 INFO  : Disconnected from the channel tcfchan#8.
+13:57:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:57:46 INFO  : Jtag cable 'Digilent Zed 210248B185CC' is selected.
+13:57:46 INFO  : 'jtag frequency' command is executed.
+13:57:46 INFO  : Context for 'APU' is selected.
+13:57:46 INFO  : System reset is completed.
+13:57:49 INFO  : 'after 3000' command is executed.
+13:57:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1' command is executed.
+13:57:51 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/systeme_wrapper.bit"
+13:57:52 INFO  : Context for 'APU' is selected.
+13:57:52 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/systeme_wrapper.xsa'.
+13:57:52 INFO  : 'configparams force-mem-access 1' command is executed.
+13:57:52 INFO  : Context for 'APU' is selected.
+13:57:52 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl' is done.
+13:57:52 INFO  : 'ps7_init' command is executed.
+13:57:52 INFO  : 'ps7_post_config' command is executed.
+13:57:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:57:52 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:57:52 INFO  : 'configparams force-mem-access 0' command is executed.
+13:57:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/systeme_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/systeme_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:57:52 INFO  : Memory regions updated for context APU
+13:57:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:57:52 INFO  : 'con' command is executed.
+13:57:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:57:52 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\Fibo_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_app_system_standalone.tcl'
+13:58:29 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+14:15:22 INFO  : Removed 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat' from custom platform repositories.
+14:16:35 INFO  : Successfully done sdx_reload_mss "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+14:16:35 INFO  : Successfully done sdx_reload_mss "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+14:24:28 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+14:25:26 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+14:29:49 INFO  : Removed 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat' from custom platform repositories.
+14:33:28 INFO  : Successfully done sdx_reload_mss "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+14:33:28 INFO  : Successfully done sdx_reload_mss "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+14:37:49 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+14:38:19 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+14:38:37 INFO  : Disconnected from the channel tcfchan#10.
+14:38:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:38:39 INFO  : Jtag cable 'Digilent Zed 210248B185CC' is selected.
+14:38:39 INFO  : 'jtag frequency' command is executed.
+14:38:39 INFO  : Context for 'APU' is selected.
+14:38:39 INFO  : System reset is completed.
+14:38:42 INFO  : 'after 3000' command is executed.
+14:38:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1' command is executed.
+14:38:44 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit"
+14:38:44 INFO  : Context for 'APU' is selected.
+14:38:44 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa'.
+14:38:44 INFO  : 'configparams force-mem-access 1' command is executed.
+14:38:44 INFO  : Context for 'APU' is selected.
+14:38:44 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl' is done.
+14:38:44 INFO  : 'ps7_init' command is executed.
+14:38:44 INFO  : 'ps7_post_config' command is executed.
+14:38:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:38:45 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:38:45 INFO  : 'configparams force-mem-access 0' command is executed.
+14:38:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:38:45 INFO  : Memory regions updated for context APU
+14:38:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:38:45 INFO  : 'con' command is executed.
+14:38:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:38:45 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\Fibo_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_app_system_standalone.tcl'
+14:40:22 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+14:40:36 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+14:40:47 INFO  : Disconnected from the channel tcfchan#17.
+14:40:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:40:47 INFO  : Jtag cable 'Digilent Zed 210248B185CC' is selected.
+14:40:47 INFO  : 'jtag frequency' command is executed.
+14:40:47 INFO  : Context for 'APU' is selected.
+14:40:47 INFO  : System reset is completed.
+14:40:50 INFO  : 'after 3000' command is executed.
+14:40:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1' command is executed.
+14:40:53 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit"
+14:40:53 INFO  : Context for 'APU' is selected.
+14:40:53 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa'.
+14:40:53 INFO  : 'configparams force-mem-access 1' command is executed.
+14:40:53 INFO  : Context for 'APU' is selected.
+14:40:53 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl' is done.
+14:40:53 INFO  : 'ps7_init' command is executed.
+14:40:53 INFO  : 'ps7_post_config' command is executed.
+14:40:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:40:54 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:40:54 INFO  : 'configparams force-mem-access 0' command is executed.
+14:40:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:40:54 INFO  : Memory regions updated for context APU
+14:40:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:40:54 INFO  : 'con' command is executed.
+14:40:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:40:54 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\Fibo_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_app_system_standalone.tcl'
+14:41:05 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+14:41:16 INFO  : Disconnected from the channel tcfchan#20.
+14:41:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:41:16 INFO  : Jtag cable 'Digilent Zed 210248B185CC' is selected.
+14:41:16 INFO  : 'jtag frequency' command is executed.
+14:41:16 INFO  : Context for 'APU' is selected.
+14:41:16 INFO  : System reset is completed.
+14:41:19 INFO  : 'after 3000' command is executed.
+14:41:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1' command is executed.
+14:41:21 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit"
+14:41:21 INFO  : Context for 'APU' is selected.
+14:41:21 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa'.
+14:41:21 INFO  : 'configparams force-mem-access 1' command is executed.
+14:41:21 INFO  : Context for 'APU' is selected.
+14:41:21 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl' is done.
+14:41:22 INFO  : 'ps7_init' command is executed.
+14:41:22 INFO  : 'ps7_post_config' command is executed.
+14:41:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:41:22 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:41:22 INFO  : 'configparams force-mem-access 0' command is executed.
+14:41:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:41:22 INFO  : Memory regions updated for context APU
+14:41:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:41:22 INFO  : 'con' command is executed.
+14:41:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:41:22 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\Fibo_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_app_system_standalone.tcl'
+14:42:25 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+14:42:40 INFO  : Disconnected from the channel tcfchan#22.
+14:42:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:42:40 INFO  : Jtag cable 'Digilent Zed 210248B185CC' is selected.
+14:42:40 INFO  : 'jtag frequency' command is executed.
+14:42:40 INFO  : Context for 'APU' is selected.
+14:42:40 INFO  : System reset is completed.
+14:42:43 INFO  : 'after 3000' command is executed.
+14:42:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1' command is executed.
+14:42:45 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit"
+14:42:45 INFO  : Context for 'APU' is selected.
+14:42:45 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa'.
+14:42:45 INFO  : 'configparams force-mem-access 1' command is executed.
+14:42:45 INFO  : Context for 'APU' is selected.
+14:42:45 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl' is done.
+14:42:46 INFO  : 'ps7_init' command is executed.
+14:42:46 INFO  : 'ps7_post_config' command is executed.
+14:42:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:42:46 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:42:46 INFO  : 'configparams force-mem-access 0' command is executed.
+14:42:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:42:46 INFO  : Memory regions updated for context APU
+14:42:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:42:46 INFO  : 'con' command is executed.
+14:42:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:42:46 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\Fibo_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_app_system_standalone.tcl'
+14:43:22 INFO  : Disconnected from the channel tcfchan#24.
+14:43:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:43:22 INFO  : Jtag cable 'Digilent Zed 210248B185CC' is selected.
+14:43:22 INFO  : 'jtag frequency' command is executed.
+14:43:22 INFO  : Context for 'APU' is selected.
+14:43:22 INFO  : System reset is completed.
+14:43:25 INFO  : 'after 3000' command is executed.
+14:43:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1' command is executed.
+14:43:28 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit"
+14:43:28 INFO  : Context for 'APU' is selected.
+14:43:28 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa'.
+14:43:28 INFO  : 'configparams force-mem-access 1' command is executed.
+14:43:28 INFO  : Context for 'APU' is selected.
+14:43:28 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl' is done.
+14:43:28 INFO  : 'ps7_init' command is executed.
+14:43:28 INFO  : 'ps7_post_config' command is executed.
+14:43:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:43:29 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:43:29 INFO  : 'configparams force-mem-access 0' command is executed.
+14:43:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:43:29 INFO  : Memory regions updated for context APU
+14:43:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:43:29 INFO  : 'con' command is executed.
+14:43:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:43:29 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\Fibo_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_app_system_standalone.tcl'
+14:44:38 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+14:44:58 INFO  : Disconnected from the channel tcfchan#25.
+14:44:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:44:58 INFO  : Jtag cable 'Digilent Zed 210248B185CC' is selected.
+14:44:58 INFO  : 'jtag frequency' command is executed.
+14:44:58 INFO  : Context for 'APU' is selected.
+14:44:58 INFO  : System reset is completed.
+14:45:01 INFO  : 'after 3000' command is executed.
+14:45:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1' command is executed.
+14:45:04 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit"
+14:45:04 INFO  : Context for 'APU' is selected.
+14:45:04 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa'.
+14:45:04 INFO  : 'configparams force-mem-access 1' command is executed.
+14:45:04 INFO  : Context for 'APU' is selected.
+14:45:04 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl' is done.
+14:45:04 INFO  : 'ps7_init' command is executed.
+14:45:04 INFO  : 'ps7_post_config' command is executed.
+14:45:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:45:05 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:45:05 INFO  : 'configparams force-mem-access 0' command is executed.
+14:45:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:45:05 INFO  : Memory regions updated for context APU
+14:45:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:45:05 INFO  : 'con' command is executed.
+14:45:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:45:05 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\Fibo_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_app_system_standalone.tcl'
+14:45:52 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+14:45:58 INFO  : Checking for BSP changes to sync application flags for project 'app'...
+14:46:06 INFO  : Disconnected from the channel tcfchan#27.
+14:46:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:46:06 INFO  : Jtag cable 'Digilent Zed 210248B185CC' is selected.
+14:46:06 INFO  : 'jtag frequency' command is executed.
+14:46:06 INFO  : Context for 'APU' is selected.
+14:46:06 INFO  : System reset is completed.
+14:46:09 INFO  : 'after 3000' command is executed.
+14:46:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1' command is executed.
+14:46:11 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit"
+14:46:12 INFO  : Context for 'APU' is selected.
+14:46:12 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa'.
+14:46:12 INFO  : 'configparams force-mem-access 1' command is executed.
+14:46:12 INFO  : Context for 'APU' is selected.
+14:46:12 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl' is done.
+14:46:12 INFO  : 'ps7_init' command is executed.
+14:46:12 INFO  : 'ps7_post_config' command is executed.
+14:46:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:46:12 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:46:12 INFO  : 'configparams force-mem-access 0' command is executed.
+14:46:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:46:12 INFO  : Memory regions updated for context APU
+14:46:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:46:12 INFO  : 'con' command is executed.
+14:46:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:46:12 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\Fibo_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_app_system_standalone.tcl'
+14:51:06 INFO  : Disconnected from the channel tcfchan#28.
+14:51:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:51:06 INFO  : Jtag cable 'Digilent Zed 210248B185CC' is selected.
+14:51:06 INFO  : 'jtag frequency' command is executed.
+14:51:06 INFO  : Context for 'APU' is selected.
+14:51:06 INFO  : System reset is completed.
+14:51:09 INFO  : 'after 3000' command is executed.
+14:51:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1' command is executed.
+14:51:11 INFO  : FPGA configured successfully with bitstream "C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit"
+14:51:11 INFO  : Context for 'APU' is selected.
+14:51:11 INFO  : Hardware design information is loaded from 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa'.
+14:51:11 INFO  : 'configparams force-mem-access 1' command is executed.
+14:51:11 INFO  : Context for 'APU' is selected.
+14:51:11 INFO  : Sourcing of 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl' is done.
+14:51:12 INFO  : 'ps7_init' command is executed.
+14:51:12 INFO  : 'ps7_post_config' command is executed.
+14:51:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:51:12 INFO  : The application 'C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:51:12 INFO  : 'configparams force-mem-access 0' command is executed.
+14:51:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B185CC" && level==0} -index 1
+fpga -file C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/bitstream/hardware.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/hw/hardware.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:51:12 INFO  : Memory regions updated for context APU
+14:51:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:51:12 INFO  : 'con' command is executed.
+14:51:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:51:12 INFO  : Launch script is exported to file 'C:\Users\ap576391\Documents\Hermann\Fibo_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_app_system_standalone.tcl'

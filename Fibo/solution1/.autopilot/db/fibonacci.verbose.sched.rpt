@@ -1,0 +1,145 @@
+
+
+================================================================
+== Vivado HLS Report for 'fibonacci'
+================================================================
+* Date:           Mon Jan 15 14:07:15 2024
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        Fibo
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 5.242 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |        ?|        ?|         1|          -|          -|     ?|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.24>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %entre) nounwind, !map !7"   --->   Operation 3 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %sortie) nounwind, !map !13"   --->   Operation 4 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @fibonacci_str) nounwind"   --->   Operation 5 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (1.00ns)   --->   "%entre_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %entre) nounwind" [Fibo/Fibo.cpp:4]   --->   Operation 6 'read' 'entre_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [Fibo/Fibo.cpp:6]   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %entre, [10 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [Fibo/Fibo.cpp:7]   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %sortie, [10 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [Fibo/Fibo.cpp:8]   --->   Operation 9 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (2.47ns)   --->   "%icmp_ln14 = icmp eq i32 %entre_read, 1" [Fibo/Fibo.cpp:14]   --->   Operation 10 'icmp' 'icmp_ln14' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (1.76ns)   --->   "br i1 %icmp_ln14, label %.loopexit, label %.preheader.preheader" [Fibo/Fibo.cpp:14]   --->   Operation 11 'br' <Predicate = true> <Delay = 1.76>
+ST_1 : Operation 12 [1/1] (1.76ns)   --->   "br label %.preheader" [Fibo/Fibo.cpp:16]   --->   Operation 12 'br' <Predicate = (!icmp_ln14)> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 2.76>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%F0 = phi i32 [ %F2, %0 ], [ 1, %.preheader.preheader ]"   --->   Operation 13 'phi' 'F0' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%F0_0 = phi i32 [ %F0, %0 ], [ 0, %.preheader.preheader ]"   --->   Operation 14 'phi' 'F0_0' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%F2_0 = phi i32 [ %F2, %0 ], [ 0, %.preheader.preheader ]"   --->   Operation 15 'phi' 'F2_0' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%i_0 = phi i32 [ %i, %0 ], [ 2, %.preheader.preheader ]"   --->   Operation 16 'phi' 'i_0' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (2.47ns)   --->   "%icmp_ln16 = icmp sgt i32 %i_0, %entre_read" [Fibo/Fibo.cpp:16]   --->   Operation 17 'icmp' 'icmp_ln16' <Predicate = (!icmp_ln14)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "br i1 %icmp_ln16, label %.loopexit.loopexit, label %0" [Fibo/Fibo.cpp:16]   --->   Operation 18 'br' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (2.55ns)   --->   "%F2 = add nsw i32 %F0_0, %F0" [Fibo/Fibo.cpp:17]   --->   Operation 19 'add' 'F2' <Predicate = (!icmp_ln14 & !icmp_ln16)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (2.55ns)   --->   "%i = add nsw i32 %i_0, 1" [Fibo/Fibo.cpp:16]   --->   Operation 20 'add' 'i' <Predicate = (!icmp_ln14 & !icmp_ln16)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "br label %.preheader" [Fibo/Fibo.cpp:16]   --->   Operation 21 'br' <Predicate = (!icmp_ln14 & !icmp_ln16)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (1.76ns)   --->   "br label %.loopexit"   --->   Operation 22 'br' <Predicate = (!icmp_ln14 & icmp_ln16)> <Delay = 1.76>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%storemerge = phi i32 [ 1, %._crit_edge ], [ %F2_0, %.loopexit.loopexit ]" [Fibo/Fibo.cpp:17]   --->   Operation 23 'phi' 'storemerge' <Predicate = (icmp_ln16) | (icmp_ln14)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (1.00ns)   --->   "call void @_ssdm_op_Write.s_axilite.i32P(i32* %sortie, i32 %storemerge) nounwind" [Fibo/Fibo.cpp:14]   --->   Operation 24 'write' <Predicate = (icmp_ln16) | (icmp_ln14)> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "ret void" [Fibo/Fibo.cpp:23]   --->   Operation 25 'ret' <Predicate = (icmp_ln16) | (icmp_ln14)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 5.24ns
+The critical path consists of the following:
+	s_axi read on port 'entre' (Fibo/Fibo.cpp:4) [6]  (1 ns)
+	'icmp' operation ('icmp_ln14', Fibo/Fibo.cpp:14) [10]  (2.47 ns)
+	multiplexor before 'phi' operation ('storemerge', Fibo/Fibo.cpp:17) with incoming values : ('F2', Fibo/Fibo.cpp:17) [28]  (1.77 ns)
+
+ <State 2>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('F2') with incoming values : ('F2', Fibo/Fibo.cpp:17) [17]  (0 ns)
+	multiplexor before 'phi' operation ('storemerge', Fibo/Fibo.cpp:17) with incoming values : ('F2', Fibo/Fibo.cpp:17) [28]  (1.77 ns)
+	'phi' operation ('storemerge', Fibo/Fibo.cpp:17) with incoming values : ('F2', Fibo/Fibo.cpp:17) [28]  (0 ns)
+	s_axi write on port 'sortie' (Fibo/Fibo.cpp:14) [29]  (1 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

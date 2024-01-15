@@ -1,0 +1,105 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Tue Nov 21 08:55:38 2023
+| Host         : gs21-09 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'systeme_mire_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of systeme_mire_0_0 (xilinx.com:hls:mire:1.0) from (Rev. 2113305040) to (Rev. 2113305055)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'systeme_mire_0_0'.
+
+
+-Upgrade has removed interface 'ap_rst'
+
+-Upgrade has removed interface 'x_V'
+
+-Upgrade has removed interface 'y_V'
+
+-Upgrade has added interface 'ap_rst_n' (xilinx.com:signal:reset:1.0)
+
+-Upgrade has added interface 's_axi_AXILiteS' (xilinx.com:interface:aximm:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'systeme_mire_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'ap_rst'
+
+-Upgrade has removed port 'x_V'
+
+-Upgrade has removed port 'y_V'
+
+-Upgrade has added port 'ap_rst_n'
+
+-Upgrade has added port 's_axi_AXILiteS_ARADDR'
+
+-Upgrade has added port 's_axi_AXILiteS_ARREADY'
+
+-Upgrade has added port 's_axi_AXILiteS_ARVALID'
+
+-Upgrade has added port 's_axi_AXILiteS_AWADDR'
+
+-Upgrade has added port 's_axi_AXILiteS_AWREADY'
+
+-Upgrade has added port 's_axi_AXILiteS_AWVALID'
+
+-Upgrade has added port 's_axi_AXILiteS_BREADY'
+
+-Upgrade has added port 's_axi_AXILiteS_BRESP'
+
+-Upgrade has added port 's_axi_AXILiteS_BVALID'
+
+-Upgrade has added port 's_axi_AXILiteS_RDATA'
+
+-Upgrade has added port 's_axi_AXILiteS_RREADY'
+
+-Upgrade has added port 's_axi_AXILiteS_RRESP'
+
+-Upgrade has added port 's_axi_AXILiteS_RVALID'
+
+-Upgrade has added port 's_axi_AXILiteS_WDATA'
+
+-Upgrade has added port 's_axi_AXILiteS_WREADY'
+
+-Upgrade has added port 's_axi_AXILiteS_WSTRB'
+
+-Upgrade has added port 's_axi_AXILiteS_WVALID'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Tue Nov 21 08:44:24 2023
+| Host         : gs21-09 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'systeme_mire_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of systeme_mire_0_0 (xilinx.com:hls:mire:1.0) from (Rev. 2113254930) to (Rev. 2113305040)
+

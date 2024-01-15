@@ -1,0 +1,10 @@
+14:25:27 **** Incremental Build of configuration Debug for project application_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 49926 C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/plat.xpfm standalone_domain C:/Users/ap576391/Documents/Hermann/Fibo_vitis/application_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/plat.xpfm --sys_config plat --bif C:/Users/ap576391/Documents/Hermann/Fibo_vitis/application_system/Debug/system.bif --bitstream C:/Users/ap576391/Documents/Hermann/Fibo_vitis/application/_ide/bitstream/fibo_hardware.bit --elf C:/Users/ap576391/Documents/Hermann/Fibo_vitis/application/Debug/application.elf,ps7_cortexa9_0
+ELF does not exist: C:/Users/ap576391/Documents/Hermann/Fibo_vitis/application/Debug/application.elf
+make: *** [makefile:37: sd_card] Error 1
+
+14:25:30 Build Finished (took 2s.473ms)
+

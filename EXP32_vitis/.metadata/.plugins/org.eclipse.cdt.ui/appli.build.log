@@ -1,0 +1,25 @@
+16:18:50 **** Incremental Build of configuration Debug for project appli ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/export/platform/sw/platform/domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: appli.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/ap576391/Documents/Hermann/EXP32_vitis/platform/export/platform/sw/platform/domain/bsplib/lib -o "appli.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: appli.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size appli.elf  |tee "appli.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33500	   1576	  23448	  58524	   e49c	appli.elf
+'Finished building: appli.elf.size'
+' '
+
+16:18:51 Build Finished (took 976ms)
+

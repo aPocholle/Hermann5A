@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# 
+# Start of session at: Tue Dec  5 15:42:08 2023
+# Process ID: 3404
+# Current directory: C:/Users/ap576391/Documents/Hermann/EXP32_vitis/webtalk
+# Command line: wbtcv.exe -mode batch -source vitis_webtalk.tcl
+# Log file: C:/Users/ap576391/Documents/Hermann/EXP32_vitis/webtalk/webtalk.log
+# Journal file: C:/Users/ap576391/Documents/Hermann/EXP32_vitis/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source vitis_webtalk.tcl

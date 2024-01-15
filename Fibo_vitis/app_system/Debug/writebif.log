@@ -1,0 +1,63 @@
+TRACE::2024-01-15.14:37:53::SCWBifWriter::Found the complete platform C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/plat.xpfm
+TRACE::2024-01-15.14:37:53::SCWBifWriter::hardware databse : systeme_wrapper_10
+TRACE::2024-01-15.14:37:53::SCWBifWriter::bitstream found in the design
+TRACE::2024-01-15.14:37:53::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2024-01-15.14:37:53::SCWBifWriter::proc type : 
+TRACE::2024-01-15.14:37:53::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2024-01-15.14:37:53::SCWBifWriter::Device type is : zynq
+TRACE::2024-01-15.14:37:53::SCWBifWriter::Writing BIF to file : C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app_system/Debug/system.bif
+TRACE::2024-01-15.14:37:53::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2024-01-15.14:38:23::SCWBifWriter::Found the complete platform C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/plat.xpfm
+TRACE::2024-01-15.14:38:23::SCWBifWriter::hardware databse : systeme_wrapper_10
+TRACE::2024-01-15.14:38:23::SCWBifWriter::bitstream found in the design
+TRACE::2024-01-15.14:38:23::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2024-01-15.14:38:23::SCWBifWriter::proc type : 
+TRACE::2024-01-15.14:38:23::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2024-01-15.14:38:23::SCWBifWriter::Device type is : zynq
+TRACE::2024-01-15.14:38:23::SCWBifWriter::Writing BIF to file : C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app_system/Debug/system.bif
+TRACE::2024-01-15.14:38:23::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2024-01-15.14:40:25::SCWBifWriter::Found the complete platform C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/plat.xpfm
+TRACE::2024-01-15.14:40:26::SCWBifWriter::hardware databse : systeme_wrapper_10
+TRACE::2024-01-15.14:40:26::SCWBifWriter::bitstream found in the design
+TRACE::2024-01-15.14:40:26::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2024-01-15.14:40:26::SCWBifWriter::proc type : 
+TRACE::2024-01-15.14:40:26::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2024-01-15.14:40:26::SCWBifWriter::Device type is : zynq
+TRACE::2024-01-15.14:40:26::SCWBifWriter::Writing BIF to file : C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app_system/Debug/system.bif
+TRACE::2024-01-15.14:40:26::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2024-01-15.14:40:39::SCWBifWriter::Found the complete platform C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/plat.xpfm
+TRACE::2024-01-15.14:40:40::SCWBifWriter::hardware databse : systeme_wrapper_10
+TRACE::2024-01-15.14:40:40::SCWBifWriter::bitstream found in the design
+TRACE::2024-01-15.14:40:40::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2024-01-15.14:40:40::SCWBifWriter::proc type : 
+TRACE::2024-01-15.14:40:40::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2024-01-15.14:40:40::SCWBifWriter::Device type is : zynq
+TRACE::2024-01-15.14:40:40::SCWBifWriter::Writing BIF to file : C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app_system/Debug/system.bif
+TRACE::2024-01-15.14:40:40::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2024-01-15.14:41:08::SCWBifWriter::Found the complete platform C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/plat.xpfm
+TRACE::2024-01-15.14:41:08::SCWBifWriter::hardware databse : systeme_wrapper_10
+TRACE::2024-01-15.14:41:08::SCWBifWriter::bitstream found in the design
+TRACE::2024-01-15.14:41:08::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2024-01-15.14:41:08::SCWBifWriter::proc type : 
+TRACE::2024-01-15.14:41:08::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2024-01-15.14:41:08::SCWBifWriter::Device type is : zynq
+TRACE::2024-01-15.14:41:08::SCWBifWriter::Writing BIF to file : C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app_system/Debug/system.bif
+TRACE::2024-01-15.14:41:08::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2024-01-15.14:42:29::SCWBifWriter::Found the complete platform C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/plat.xpfm
+TRACE::2024-01-15.14:42:29::SCWBifWriter::hardware databse : systeme_wrapper_10
+TRACE::2024-01-15.14:42:29::SCWBifWriter::bitstream found in the design
+TRACE::2024-01-15.14:42:29::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2024-01-15.14:42:29::SCWBifWriter::proc type : 
+TRACE::2024-01-15.14:42:29::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2024-01-15.14:42:29::SCWBifWriter::Device type is : zynq
+TRACE::2024-01-15.14:42:29::SCWBifWriter::Writing BIF to file : C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app_system/Debug/system.bif
+TRACE::2024-01-15.14:42:29::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2024-01-15.14:44:42::SCWBifWriter::Found the complete platform C:/Users/ap576391/Documents/Hermann/Fibo_vitis/plat/export/plat/plat.xpfm
+TRACE::2024-01-15.14:44:42::SCWBifWriter::hardware databse : systeme_wrapper_10
+TRACE::2024-01-15.14:44:42::SCWBifWriter::bitstream found in the design
+TRACE::2024-01-15.14:44:42::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2024-01-15.14:44:42::SCWBifWriter::proc type : 
+TRACE::2024-01-15.14:44:42::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2024-01-15.14:44:42::SCWBifWriter::Device type is : zynq
+TRACE::2024-01-15.14:44:42::SCWBifWriter::Writing BIF to file : C:/Users/ap576391/Documents/Hermann/Fibo_vitis/app_system/Debug/system.bif
+TRACE::2024-01-15.14:44:42::SCWBifWriter::Writing the Zynq Baremetal bif 
